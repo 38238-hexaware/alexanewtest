@@ -1,7 +1,13 @@
-//const request = require('request-promise')  ;
+const request = require('request-promise')  ;
 var fetch = require('node-fetch');
 var express=require('express');
 var app=express();
+var reqnew = require('request');
+reqnew('http://widgets.fabulously40.com/horoscope.json?sign=capricorn', function (error, response, body) {
+  console.log('error:', error); // Print the error if one occurred 
+  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received 
+  console.log('body:', body); // Print the HTML for the Google homepage. 
+});
 // const options = {  
 //   method: 'GET',
 //   uri: 'http://widgets.fabulously40.com/horoscope.json?sign=capricorn',
